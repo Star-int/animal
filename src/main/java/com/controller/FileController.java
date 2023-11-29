@@ -10,6 +10,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,6 +27,8 @@ import java.util.Date;
  */
 @RestController
 @RequestMapping("file")
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 @SuppressWarnings({"unchecked","rawtypes"})
 public class FileController{
 	@Autowired

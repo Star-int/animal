@@ -28,6 +28,8 @@ import java.util.*;
  * 通用接口
  */
 @RestController
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 public class CommonController{
 	@Autowired
 	private CommonService commonService;

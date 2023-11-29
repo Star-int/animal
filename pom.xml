@@ -8,6 +8,7 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com</groupId>
     <artifactId>animal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -27,9 +28,10 @@
         <aspectjweaver.version>1.8.8</aspectjweaver.version>
         <fileupload.version>1.3.1</fileupload.version>
         <jstl.version>1.2</jstl.version>
-
+        <tomcat.version>9.0.37</tomcat.version>
 
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,16 +47,28 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+<!--            忽略内置tomcat-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
         </dependency>
+
+
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.3</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+
+
 
         <!-- FileUpload -->
         <dependency>
@@ -69,10 +83,10 @@
             <version>${jstl.version}</version>
         </dependency>
 
-        <!-- Mybatis-Plus -->
+        <!--mybatis plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybaitsplus.version}</version>
         </dependency>
 
@@ -143,11 +157,27 @@
             <version>4.0.12</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core -->
+
+       <!--tomcat版本-->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
-            <version>9.0.29</version>
+            <version>${tomcat.version}</version>
         </dependency>
+
+
+<!--         增加对jsp文件的支持-->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jsp-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
         <dependency>
@@ -166,6 +196,13 @@
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.10.1</version>
+
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.10.1</version>
         </dependency>
@@ -182,16 +219,24 @@
             <version>1.9.13</version>
         </dependency>
 
+        
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+            <scope>provided</scope>
+        </dependency>
 
 
 
 
     </dependencies>
 
+
     <build>
         <!-- 项目访问名称 -->
-<!--        <finalName>ssmqj7b0</finalName>-->
+        <finalName>ssmqj7b0</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -203,5 +248,8 @@
             </plugin>
         </plugins>
     </build>
+
+
+
 
 </project>

@@ -1,12 +1,15 @@
 
 package com.dao;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 import java.util.Map;
 
 /**
  * 通用接口
  */
+@Mapper
 public interface CommonDao{
 	List<String> getOption(Map<String, Object> params);
 	

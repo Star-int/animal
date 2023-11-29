@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.plugins.pagination.Pagination;
 import com.entity.ChongwujicunEntity;
 import com.entity.view.ChongwujicunView;
 import com.entity.vo.ChongwujicunVO;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
  * @email 
  * @date 2021-01-16 09:02:05
  */
+@Mapper
 public interface ChongwujicunDao extends BaseMapper<ChongwujicunEntity> {
 	
 	List<ChongwujicunVO> selectListVO(@Param("ew") Wrapper<ChongwujicunEntity> wrapper);

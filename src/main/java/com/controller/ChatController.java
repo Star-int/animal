@@ -29,6 +29,8 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/chat")
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 public class ChatController {
     @Autowired
     private ChatService chatService;

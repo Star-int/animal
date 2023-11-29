@@ -29,6 +29,8 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/news")
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 public class NewsController {
     @Autowired
     private NewsService newsService;

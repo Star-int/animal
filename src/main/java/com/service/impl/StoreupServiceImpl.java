@@ -36,8 +36,14 @@ public class StoreupServiceImpl extends ServiceImpl<StoreupDao, StoreupEntity> i
 	    	PageUtils pageUtil = new PageUtils(page);
 	    	return pageUtil;
  	}
-    
-    @Override
+
+	@Override
+	public String queryAll() {
+		String storeupEntities = baseMapper.queryAll();
+		return  storeupEntities;
+	}
+
+	@Override
 	public List<StoreupVO> selectListVO(Wrapper<StoreupEntity> wrapper) {
  		return baseMapper.selectListVO(wrapper);
 	}

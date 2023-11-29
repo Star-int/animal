@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.plugins.pagination.Pagination;
 import com.entity.AddressEntity;
 import com.entity.view.AddressView;
 import com.entity.vo.AddressVO;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
  * @email 
  * @date 2021-01-16 09:02:06
  */
+@Mapper
 public interface AddressDao extends BaseMapper<AddressEntity> {
 	
 	List<AddressVO> selectListVO(@Param("ew") Wrapper<AddressEntity> wrapper);

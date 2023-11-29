@@ -30,6 +30,8 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/yonghu")
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 public class YonghuController {
     @Autowired
     private YonghuService yonghuService;

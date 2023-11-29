@@ -29,6 +29,8 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/chongwulingyang")
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 public class ChongwulingyangController {
     @Autowired
     private ChongwulingyangService chongwulingyangService;

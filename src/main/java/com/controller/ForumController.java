@@ -26,6 +26,8 @@ import java.util.*;
  */
 @RestController
 @RequestMapping("/forum")
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 public class ForumController {
     @Autowired
     private ForumService forumService;

@@ -32,6 +32,8 @@ public interface StoreupService extends IService<StoreupEntity> {
    	StoreupView selectView(@Param("ew") Wrapper<StoreupEntity> wrapper);
    	
    	PageUtils queryPage(Map<String, Object> params, Wrapper<StoreupEntity> wrapper);
+
+	String queryAll();
    	
 }
 

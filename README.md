@@ -18,9 +18,9 @@
 
 >访问路径
 >
-> http://localhost:8080/front/index.html
+> http://localhost:8080/ssmqj7b0/front/index.html
 >
-> http://localhost:8080/admin/dist/index.html#/index
+> http://localhost:8080/ssmqj7b0/admin/dist/index.html#/index
 >
 > 密码 : abo abo
 

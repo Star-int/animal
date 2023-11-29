@@ -28,6 +28,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/address")
+@CrossOrigin(origins = "*",maxAge = 3600)
 public class AddressController {
     @Autowired
     private AddressService addressService;

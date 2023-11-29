@@ -1,5 +1,7 @@
 server:
   port: 8080
+  servlet:
+    context-path: /ssmqj7b0
 
 spring:
   datasource:
@@ -7,3 +9,15 @@ spring:
     url: jdbc:mysql://localhost:3306/adopt?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: 123456
+
+
+mybatis:
+  mapper-locations: classpath:dao/*.xml
+  typeAliasesPackage: com..model.*
+
+mybatis-plus:
+  mapper-locations: classpath:dao/*.xml
+  configuration:
+    # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+    # 允许在resultType="map"时映射null值
+    call-setters-on-nulls: true

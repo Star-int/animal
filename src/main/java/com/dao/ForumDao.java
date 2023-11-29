@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.plugins.pagination.Pagination;
 import com.entity.ForumEntity;
 import com.entity.view.ForumView;
 import com.entity.vo.ForumVO;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
  * @email 
  * @date 2021-01-16 09:02:06
  */
+@Mapper
 public interface ForumDao extends BaseMapper<ForumEntity> {
 	
 	List<ForumVO> selectListVO(@Param("ew") Wrapper<ForumEntity> wrapper);

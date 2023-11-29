@@ -19,6 +19,8 @@ import java.util.Map;
  */
 @RequestMapping("config")
 @RestController
+@CrossOrigin(origins = "*",maxAge = 3600)
+
 public class ConfigController{
 	
 	@Autowired
